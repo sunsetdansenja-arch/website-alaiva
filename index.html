@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #f8f9fa;
+            background-color: #f4f7f6; /* Warna background abu-abu sangat muda */
             color: #333;
             line-height: 1.6;
         }
@@ -23,7 +23,7 @@
         /* Navigation */
         nav {
             background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -35,10 +35,10 @@
 
         nav .logo {
             font-size: 1.8rem;
-            font-weight: bold;
-            color: #0077b6;
+            font-weight: 800;
+            color: #0077b6; /* Biru Alaiva */
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         nav ul {
@@ -51,6 +51,7 @@
             text-decoration: none;
             color: #555;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
 
@@ -58,121 +59,92 @@
             color: #0077b6;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #ffb703;
-            color: #023047;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #ff9e00;
-            transform: translateY(-3px);
-        }
-
         /* Sections General */
         section {
-            padding: 80px 5%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            color: #023047;
+            padding: 60px 5%;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Cards UI */
+        /* Cards UI (Menyesuaikan gambar referensi) */
         .card {
-            background: white;
+            background: #ffffff;
             border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 40px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             text-align: center;
-            border-top: 5px solid transparent;
+            border-top: 6px solid #48cae4; /* Garis biru di atas kartu */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
 
-        /* Trip Packages Specifics */
-        .trip-card:nth-child(1) { border-top-color: #8ecae6; }
-        .trip-card:nth-child(2) { border-top-color: #219ebc; }
-        .trip-card:nth-child(3) { border-top-color: #023047; }
-
         .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #023047;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #023047; /* Biru dongker untuk judul paket */
+            font-weight: 700;
         }
 
         .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #0077b6;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #00b4d8; /* Biru muda/cyan untuk harga */
+            margin-bottom: 30px;
         }
 
+        /* List Fitur dengan Centang Hijau */
         .features {
             list-style: none;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
             text-align: left;
+            padding: 0 10px;
         }
 
         .features li {
-            margin-bottom: 10px;
-            padding-left: 20px;
+            margin-bottom: 12px;
+            padding-left: 25px;
             position: relative;
+            font-size: 0.95rem;
+            color: #555;
         }
 
         .features li::before {
             content: '✓';
-            color: #2a9d8f;
+            color: #2a9d8f; /* Hijau centang */
             position: absolute;
             left: 0;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
-        /* Footer */
-        footer {
-            background-color: #023047;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
+        /* Tombol Kuning */
+        .btn {
+            display: inline-block;
+            background-color: #ffb703; /* Kuning/Orange */
+            color: #023047; /* Teks gelap */
+            padding: 14px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #fb8500;
         }
 
         /* Responsive Mobile */
@@ -180,9 +152,6 @@
             nav {
                 flex-direction: column;
                 gap: 15px;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
             }
         }
     </style>
@@ -198,16 +167,9 @@
         </ul>
     </nav>
 
-    <header class="hero">
-        <h1>Jelajahi Dunia Bersama Alaiva</h1>
-        <p>Pengalaman liburan tak terlupakan dengan panduan eksklusif, terencana, dan tanpa repot. Kami mengatur semuanya, Anda tinggal menikmati momen.</p>
-        <a href="#trip" class="btn">Lihat Paket Kami</a>
-    </header>
-
     <section id="trip">
-        <h2 class="section-title">Pilihan Paket Trip</h2>
         <div class="grid-container">
-            <div class="card trip-card">
+            <div class="card">
                 <h3>Paket Abu</h3>
                 <div class="price">Rp 1.5 Jt</div>
                 <ul class="features">
@@ -216,9 +178,10 @@
                     <li>Penginapan Standar</li>
                     <li>Guide Lokal</li>
                 </ul>
-                <a href="#" class="btn" style="width: 100%;">Pilih Paket</a>
+                <a href="#" class="btn">Pilih Paket</a>
             </div>
-            <div class="card trip-card">
+
+            <div class="card">
                 <h3>Paket Wok</h3>
                 <div class="price">Rp 3.2 Jt</div>
                 <ul class="features">
@@ -227,70 +190,22 @@
                     <li>Konsumsi Full Board</li>
                     <li>Dokumentasi Premium</li>
                 </ul>
-                <a href="#" class="btn" style="width: 100%;">Pilih Paket</a>
+                <a href="#" class="btn">Pilih Paket</a>
             </div>
-            <div class="card trip-card">
+
+            <div class="card">
                 <h3>Paket Mola</h3>
                 <div class="price">Rp 7.5 Jt</div>
                 <ul class="features">
                     <li>Trip 7 Hari 6 Malam</li>
                     <li>Resort / Hotel Bintang 5</li>
                     <li>Private Transport</li>
-                    <li>Dokumentasi Video Lengkap</li>
+                    <li>Dokumentasi Drone & Video</li>
                 </ul>
-                <a href="#" class="btn" style="width: 100%;">Pilih Paket</a>
+                <a href="#" class="btn">Pilih Paket</a>
             </div>
         </div>
     </section>
-
-    <section id="digital" style="background-color: #e9ecef;">
-        <h2 class="section-title">Produk Digital</h2>
-        <div class="grid-container">
-            <div class="card">
-                <div style="font-size: 3rem; margin-bottom: 15px;">📘</div>
-                <h3>E-Book: Ultimate Travel Guide 2026</h3>
-                <p style="margin-bottom: 20px; color: #666;">Panduan lengkap destinasi tersembunyi, tips packing, dan manajemen budget liburan.</p>
-                <div class="price" style="font-size: 1.5rem;">Rp 99.000</div>
-                <a href="#" class="btn" style="background-color: #219ebc; color: white;">Beli Sekarang</a>
-            </div>
-            <div class="card">
-                <div style="font-size: 3rem; margin-bottom: 15px;">🎨</div>
-                <h3>Preset Lightroom Alaiva</h3>
-                <p style="margin-bottom: 20px; color: #666;">Buat foto liburanmu sekeren fotografer profesional hanya dengan satu klik.</p>
-                <div class="price" style="font-size: 1.5rem;">Rp 149.000</div>
-                <a href="#" class="btn" style="background-color: #219ebc; color: white;">Beli Sekarang</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="fisik">
-        <h2 class="section-title">Alaiva Merchandise</h2>
-        <div class="grid-container">
-            <div class="card">
-                <div style="width: 100%; height: 150px; background-color: #f1faee; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                    <span style="font-size: 1.2rem; font-weight: bold; color: #1d3557;">T-Shirt Alaiva</span>
-                </div>
-                <h3>T-Shirt Explorer</h3>
-                <p style="margin-bottom: 15px; color: #666;">Bahan katun premium yang nyaman digunakan saat cuaca panas.</p>
-                <div class="price" style="font-size: 1.5rem;">Rp 185.000</div>
-                <a href="#" class="btn" style="background-color: #023047; color: white;">Beli Fisik</a>
-            </div>
-            <div class="card">
-                <div style="width: 100%; height: 150px; background-color: #f1faee; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                    <span style="font-size: 1.2rem; font-weight: bold; color: #1d3557;">Tumbler Alaiva</span>
-                </div>
-                <h3>Tumbler Insulated</h3>
-                <p style="margin-bottom: 15px; color: #666;">Tahan panas dan dingin hingga 12 jam. Cocok untuk kegiatan *outdoor*.</p>
-                <div class="price" style="font-size: 1.5rem;">Rp 250.000</div>
-                <a href="#" class="btn" style="background-color: #023047; color: white;">Beli Fisik</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <h2 style="margin-bottom: 10px;">Alaiva Tour Guide</h2>
-        <p>&copy; 2026 Alaiva. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
